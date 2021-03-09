@@ -760,6 +760,7 @@ body {
 	position: absolute;
 	z-index: 1;
 	top: 95px;
+	left: 20px;
 }
 
 /*? ---------- Heroes ---------- ?*/
@@ -1997,6 +1998,39 @@ body {
 	border: 2px solid #1a222b;
 }
 
+@media (max-width: 601px) {
+	.join__text {
+		justify-content: flex-start;
+		padding-left: 60px;
+	}
+}
+
+@media (max-width: 524px) {
+	.start__title {
+		max-width: 456px;
+	}
+}
+
+@media (max-width: 501px) {
+	.header-top {
+		display: none;
+	}
+	.start__inner {
+		padding: 0 0px 30px 0px;
+	}
+}
+
+@media (max-width: 375px) {
+	.start__title {
+		max-width: 290px;
+	}
+}
+
+@media (max-width: 1150px) {
+	.card:last-child {
+		margin-bottom: 63px;
+	}
+}
 
 @media (max-width: 601px) {
 	.join__text {
