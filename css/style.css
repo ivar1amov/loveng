@@ -2063,3 +2063,31 @@ body {
 		margin-bottom: 63px;
 	}
 }
+
+@media (max-width: 700px) {
+	.banner__subtitle {
+		max-width: 348px;
+	}
+}
+
+@media (max-width: 450px) {
+	.banner__title {
+		width: 236px;
+	}
+	.banner__subtitle {
+		width: 236px;
+	}
+	.banner__content {
+		justify-content: flex-start;
+		padding: 33px 17px;
+	}
+	.history__photo img {
+		width: 410px;
+	}
+}
+
+@media (max-width: 330px) {
+	.history__photo img {
+		width: 300px;
+	}
+}
