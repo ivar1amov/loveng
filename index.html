@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+	<title>LovEng</title>
+</head>
+
+
+<body>
+	<!-- SVP SPRITE -->
+	<svg style="display: none;">
+
+		<symbol id="logo" width="212" height="75" viewBox="0 0 212 75">
+			<path
+				d="M40.0871 41.4292C40.0871 51.0551 32.2838 58.8584 22.658 58.8584C13.0321 58.8584 5.22876 51.0551 5.22876 41.4292C5.22876 31.8033 13.0321 24 22.658 24C32.2838 24 40.0871 31.8033 40.0871 41.4292Z"
+				fill="#FF52CF" />
+			<path
+				d="M14.6405 54.5011C14.6405 57.2926 12.3776 59.5556 9.58606 59.5556C6.79455 59.5556 4.53159 57.2926 4.53159 54.5011C4.53159 51.7096 6.79455 49.4466 9.58606 49.4466C12.3776 49.4466 14.6405 51.7096 14.6405 54.5011Z"
+				fill="#FF52CF" />
+			<path
+				d="M5.22876 60.7756C5.22876 62.2195 4.05826 63.39 2.61438 63.39C1.1705 63.39 0 62.2195 0 60.7756C0 59.3317 1.1705 58.1612 2.61438 58.1612C4.05826 58.1612 5.22876 59.3317 5.22876 60.7756Z"
+				fill="#FF52CF" />
+			<path
+				d="M21 41.4292C21 51.0551 28.8033 58.8584 38.4292 58.8584C48.0551 58.8584 55.8584 51.0551 55.8584 41.4292C55.8584 31.8033 48.0551 24 38.4292 24C28.8033 24 21 31.8033 21 41.4292Z"
+				fill="#0975FD" />
+			<path
+				d="M46.4466 54.5011C46.4466 57.2926 48.7096 59.5556 51.5011 59.5556C54.2926 59.5556 56.5556 57.2926 56.5556 54.5011C56.5556 51.7096 54.2926 49.4466 51.5011 49.4466C48.7096 49.4466 46.4466 51.7096 46.4466 54.5011Z"
+				fill="#0975FD" />
+			<path
+				d="M55.8584 60.7756C55.8584 62.2195 57.0289 63.39 58.4728 63.39C59.9167 63.39 61.0872 62.2195 61.0872 60.7756C61.0872 59.3317 59.9167 58.1612 58.4728 58.1612C57.0289 58.1612 55.8584 59.3317 55.8584 60.7756Z"
+				fill="#0975FD" />
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M30.2226 33.4822C29.7825 33.7472 29.1771 34.2066 28.8774 34.5028C28.5774 34.7992 28.1381 35.3344 27.9008 35.6923C27.6634 36.0502 27.3637 36.793 27.2346 37.3428C27.1055 37.8927 27 38.7167 27 39.1739C27 39.6311 27.1034 40.4327 27.2298 40.9553C27.356 41.4778 27.8004 42.568 28.2169 43.3782C28.7144 44.3452 29.6975 45.5701 31.08 46.9453C32.2382 48.0971 33.5642 49.3013 34.0269 49.6212C34.4896 49.9412 35.0152 50.3442 35.1953 50.5169C35.375 50.6896 36.0475 51.0941 36.6893 51.4155C37.3313 51.7371 38.0057 52 38.1879 52C38.3701 52 39.2118 51.5589 40.0585 51.0198C40.9053 50.4806 41.652 49.9675 41.7181 49.8801C41.7842 49.7925 42.2169 49.46 42.6795 49.141C43.1422 48.8222 44.0736 48.0163 44.7492 47.3498C45.4248 46.6836 46.5093 45.3461 47.159 44.3782C47.8086 43.4101 48.491 42.1904 48.6753 41.6678C48.8597 41.1453 49.0058 40.0553 48.9998 39.2456C48.9941 38.4361 48.8417 37.2804 48.6616 36.6773C48.4814 36.0742 48.006 35.227 47.6048 34.7945C47.2039 34.3617 46.4994 33.781 46.0397 33.504C45.3835 33.1088 44.8146 33 43.4006 33C41.9921 33 41.4167 33.1093 40.7695 33.4993C40.3138 33.7738 39.6353 34.3218 39.2615 34.717C38.888 35.1123 38.4765 35.6089 38.3475 35.8203C38.1376 36.1645 38.0687 36.1521 37.6923 35.7035C37.461 35.4277 37.0553 34.9329 36.7909 34.6042C36.5266 34.2755 35.9317 33.78 35.469 33.5033C34.8105 33.1093 34.2363 33 32.8252 33C31.4369 33 30.8386 33.1109 30.2226 33.4822Z"
+				fill="white" />
+			<path
+				d="M68.6558 50V22.6294H71.1851H73.7144V45.2847H82.0972V47.6333V50H68.6558ZM94.1294 50.6865C91.1063 50.6865 88.5288 49.6266 86.397 47.5068C84.2772 45.375 83.2173 42.7915 83.2173 39.7563C83.2173 36.7212 84.2772 34.1377 86.397 32.0059C88.5288 29.862 91.1063 28.79 94.1294 28.79C97.1646 28.79 99.742 29.862 101.862 32.0059C103.994 34.1377 105.06 36.7212 105.06 39.7563C105.06 42.7915 103.994 45.375 101.862 47.5068C99.742 49.6266 97.1646 50.6865 94.1294 50.6865ZM94.1294 46.188C95.8276 46.188 97.2489 45.5737 98.3931 44.3452C99.5373 43.1167 100.109 41.5871 100.109 39.7563C100.109 37.9256 99.5373 36.39 98.3931 35.1494C97.2489 33.9089 95.8276 33.2886 94.1294 33.2886C92.4432 33.2886 91.028 33.9089 89.8838 35.1494C88.7396 36.39 88.1675 37.9256 88.1675 39.7563C88.1675 41.5871 88.7396 43.1167 89.8838 44.3452C91.028 45.5737 92.4432 46.188 94.1294 46.188ZM106.107 29.4766H108.709H111.329L116.351 43.6406L121.355 29.4766H123.957H126.577L118.284 50H116.333H114.382L106.107 29.4766ZM128.998 50V22.6294H143.722V24.978V27.3447H134.056V34.0835H143.27V36.4321V38.7988H134.056V45.2847H143.722V47.6333V50H128.998ZM148.003 50V29.4766H150.298H152.592V31.2471C154.182 29.609 156.085 28.79 158.301 28.79C160.734 28.79 162.661 29.6151 164.083 31.2651C165.516 32.9032 166.232 35.1193 166.232 37.9136V50H163.775H161.3V39.0156C161.3 37.1367 160.951 35.7095 160.252 34.7339C159.554 33.7583 158.536 33.2705 157.199 33.2705C155.778 33.2705 154.712 33.7643 154.001 34.752C153.291 35.7396 152.936 37.221 152.936 39.1963V50H150.479H148.003ZM180.198 53.8662C182.137 53.8662 183.715 53.2098 184.931 51.897C185.991 50.7528 186.587 49.3014 186.72 47.543C184.696 49.6387 182.299 50.6865 179.529 50.6865C176.735 50.6865 174.35 49.6266 172.375 47.5068C170.4 45.375 169.412 42.7915 169.412 39.7563C169.412 36.7212 170.4 34.1377 172.375 32.0059C174.35 29.862 176.741 28.79 179.547 28.79C182.281 28.778 184.6 29.7716 186.503 31.771V29.4766H191.272V46.1519C191.272 49.8374 190.243 52.7943 188.183 55.0225C186.136 57.2507 183.414 58.3647 180.017 58.3647C177.56 58.3647 175.404 57.7445 173.549 56.5039C171.707 55.2754 170.472 53.6313 169.846 51.5718H175.573C175.922 52.2703 176.512 52.8244 177.343 53.2339C178.186 53.6554 179.138 53.8662 180.198 53.8662ZM180.342 33.2524C178.644 33.2524 177.223 33.8787 176.079 35.1313C174.934 36.3719 174.362 37.9136 174.362 39.7563C174.362 41.5871 174.934 43.1227 176.079 44.3633C177.223 45.6038 178.638 46.2241 180.324 46.2241C182.022 46.2241 183.444 45.6038 184.588 44.3633C185.744 43.1227 186.322 41.5811 186.322 39.7383C186.322 37.8955 185.75 36.3538 184.606 35.1133C183.462 33.8727 182.041 33.2524 180.342 33.2524Z"
+				fill="#1A222B" />
+		</symbol>
+
+		<symbol id="telegram" width="29" height="29" viewBox="0 0 29 29">
+			<circle cx="14.5" cy="14.5" r="14.5" fill="#00A7E1" />
+			<path
+				d="M22.1156 7.53567C21.8646 7.1945 21.4756 7 21.0486 7C20.7726 7 20.4866 7.08009 20.1976 7.23715L7.9206 13.9325C7.0476 14.4089 6.9876 15.1266 7.0016 15.4126C7.0156 15.7007 7.1486 16.407 8.0646 16.7846L9.6336 17.4305C9.9316 17.5532 10.2636 17.6167 10.6226 17.6167C10.6796 17.6167 10.7336 17.6083 10.7896 17.6063C10.7686 17.6354 10.7426 17.6572 10.7226 17.6874C10.4306 18.1419 10.4156 18.7587 10.6806 19.4234C10.6846 19.4348 10.6886 19.4442 10.6926 19.4535C11.1566 20.5228 11.6726 21.7294 11.7346 21.8979C11.8886 22.315 12.2806 22.602 12.7096 22.602C13.3716 22.602 13.5686 22.2702 14.6516 20.4354C14.7356 20.3013 14.9236 19.9882 14.9556 19.5908C15.0826 19.6439 15.2016 19.6938 15.3026 19.7365L17.0406 20.4729C17.3886 20.6206 17.6946 20.7516 17.8546 20.8203C17.9046 20.8525 17.9566 20.8796 18.0116 20.9025C18.1346 20.9534 18.2646 20.9784 18.3956 20.9784C19.1866 20.9784 19.3756 20.2659 19.4776 19.8842C19.5276 19.6959 19.5976 19.4338 19.6716 19.1457L22.3226 9.01266C22.5246 8.24816 22.2786 7.7593 22.1156 7.53567ZM13.7766 19.8592C13.7766 19.8592 12.7926 21.5245 12.7096 21.5245C12.7076 21.5245 12.7066 21.5234 12.7046 21.5213C12.6076 21.2519 11.6366 19.0115 11.6366 19.0115C11.4576 18.5621 11.4896 18.1773 11.7976 18.1773C11.8656 18.1773 11.9466 18.196 12.0406 18.2366L12.7956 18.6443C12.9216 18.7338 13.0596 18.8118 13.2106 18.8731L13.2486 18.8877L13.3196 18.9252C13.9026 19.2466 14.0876 19.3631 13.7766 19.8592ZM21.3246 8.72975L18.6746 18.8627C18.5246 19.4338 18.4006 19.9008 18.3976 19.9008C18.3956 19.8998 18.3926 19.8883 18.3926 19.8873C18.3926 19.8842 17.9606 19.7001 17.4326 19.4754L15.6936 18.739C15.1656 18.5164 14.2996 18.1565 13.7686 17.9433L13.6806 17.9069L13.3556 17.7311C13.0336 17.4742 13.0056 17.0508 13.3286 16.692L18.7096 10.6987C18.9256 10.4585 19.0076 10.3347 18.9606 10.3347C18.9236 10.3347 18.8036 10.4148 18.6036 10.577L11.7946 16.1636C11.4976 16.4049 11.0466 16.5391 10.6216 16.5391C10.4046 16.5391 10.1936 16.5027 10.0136 16.4288L8.4456 15.7839C7.9156 15.5655 7.8956 15.163 8.3996 14.8863L20.6776 8.18992C20.8196 8.11295 20.9436 8.07654 21.0466 8.07654C21.3116 8.07758 21.4326 8.31785 21.3246 8.72975Z"
+				fill="white" />
+		</symbol>
+		<symbol id="whatsapp" width="29" height="29" viewBox="0 0 29 29">
+			<circle cx="14.5" cy="14.5" r="14.5" fill="#64B243" />
+			<path
+				d="M22 14.9246C22 19.3013 18.703 22.8485 14.636 22.8485C13.345 22.8485 12.132 22.4906 11.077 21.8627L7 23.267L8.329 19.0161C7.658 17.8222 7.272 16.4222 7.272 14.9246C7.272 10.549 10.569 7.00073 14.636 7.00073C18.704 7.00073 22 10.549 22 14.9246ZM14.636 8.263C11.222 8.263 8.445 11.2517 8.445 14.9246C8.445 16.3821 8.883 17.7322 9.624 18.8307L8.85 21.3042L11.229 20.4844C12.206 21.1806 13.378 21.5862 14.635 21.5862C18.048 21.5862 20.826 18.5975 20.826 14.9246C20.826 11.2517 18.05 8.263 14.636 8.263ZM18.355 16.7497C18.31 16.6683 18.189 16.6195 18.009 16.523C17.828 16.4265 16.941 15.9559 16.776 15.8919C16.61 15.8268 16.49 15.7943 16.37 15.9884C16.25 16.1825 15.904 16.6206 15.798 16.7497C15.693 16.8798 15.588 16.8961 15.407 16.7985C15.227 16.7009 14.645 16.4959 13.956 15.8344C13.42 15.3193 13.057 14.6839 12.952 14.4897C12.847 14.2956 12.941 14.1904 13.031 14.0939C13.112 14.0072 13.212 13.8673 13.302 13.7534C13.392 13.6396 13.423 13.5593 13.482 13.4292C13.542 13.299 13.512 13.1863 13.467 13.0887C13.422 12.9922 13.061 12.0357 12.91 11.6464C12.76 11.2582 12.609 11.3221 12.504 11.3221C12.399 11.3221 12.278 11.3059 12.158 11.3059C12.038 11.3059 11.842 11.3547 11.677 11.5488C11.512 11.7429 11.045 12.2135 11.045 13.1689C11.045 14.1243 11.692 15.0482 11.782 15.1773C11.872 15.3063 13.03 17.332 14.865 18.1095C16.7 18.8871 16.7 18.6279 17.031 18.5954C17.362 18.5628 18.099 18.1258 18.25 17.6725C18.399 17.2192 18.399 16.831 18.355 16.7497Z"
+				fill="white" />
+		</symbol>
+		<symbol id="viber" width="29" height="29" viewBox="0 0 29 29">
+			<circle cx="14.5" cy="14.5" r="14.5" fill="#A378F1" />
+			<path
+				d="M20.3554 17.9294C20.2904 17.8774 20.2224 17.8233 20.1594 17.7702C19.8234 17.4894 19.4664 17.2304 19.1214 16.9797C19.0494 16.9277 18.9784 16.8757 18.9064 16.8237C18.4644 16.5002 18.0664 16.3431 17.6904 16.3431C17.1844 16.3431 16.7434 16.6344 16.3794 17.2075C16.2184 17.4613 16.0224 17.5851 15.7814 17.5851C15.6384 17.5851 15.4764 17.5424 15.2994 17.4592C13.8714 16.7862 12.8524 15.7534 12.2694 14.3908C11.9874 13.7324 12.0794 13.3018 12.5744 12.9513C12.8564 12.7526 13.3804 12.3823 13.3434 11.674C13.3014 10.8689 11.5944 8.44747 10.8744 8.17288C10.5694 8.05638 10.2494 8.05534 9.9214 8.16976C9.0944 8.45891 8.50139 8.9665 8.20539 9.63843C7.91939 10.2875 7.93239 11.0489 8.24239 11.8414C9.1394 14.1329 10.4014 16.1299 11.9924 17.7785C13.5494 19.3918 15.4634 20.7138 17.6814 21.7071C17.8814 21.7966 18.0914 21.8455 18.2444 21.8808C18.2964 21.8933 18.3414 21.9037 18.3744 21.9131C18.3924 21.9183 18.4114 21.9214 18.4294 21.9214H18.4474C19.4904 21.9214 20.7424 20.9302 21.1274 19.7995C21.4654 18.8114 20.8494 18.3225 20.3554 17.9294Z"
+				fill="white" />
+		</symbol>
+		<symbol id="phone" width="28" height="28" viewBox="0 0 28 28">
+			<path
+				d="M26.1602 19.2605C26.0226 19.159 25.8786 19.0534 25.7452 18.9498C25.0338 18.4015 24.2779 17.8958 23.5474 17.4064C23.395 17.3048 23.2447 17.2033 23.0922 17.1017C22.1564 16.4701 21.3137 16.1635 20.5176 16.1635C19.4462 16.1635 18.5125 16.7321 17.7418 17.8511C17.4009 18.3466 16.9859 18.5883 16.4756 18.5883C16.1729 18.5883 15.8298 18.505 15.4551 18.3426C12.4316 17.0286 10.274 15.012 9.03963 12.3516C8.44255 11.0661 8.63734 10.2253 9.68541 9.54089C10.2825 9.153 11.392 8.43002 11.3136 7.04701C11.2247 5.47514 7.61045 0.747333 6.08599 0.21119C5.44021 -0.016265 4.76267 -0.0182944 4.06819 0.205098C2.31717 0.769673 1.06161 1.76072 0.434882 3.07265C-0.170669 4.3399 -0.143145 5.82648 0.513221 7.37398C2.41245 11.8479 5.0845 15.7472 8.45314 18.966C11.7498 22.1159 15.8023 24.6971 20.4985 26.6365C20.922 26.8112 21.3666 26.9066 21.6906 26.9757C21.8007 27.0001 21.8959 27.0204 21.9658 27.0386C22.0039 27.0488 22.0442 27.0549 22.0823 27.0549H22.1204C24.3287 27.0549 26.9796 25.1195 27.7948 22.912C28.5104 20.9827 27.2062 20.0282 26.1602 19.2605Z"
+				fill="#1A222B" />
+		</symbol>
+
+		<symbol id="star" width="19" height="19" viewBox="0 0 19 19">
+			<path
+				d="M8.54843 0.945475C8.84676 0.0220334 10.1532 0.0220324 10.4516 0.945474L11.7673 5.01809C12.034 5.84376 12.8027 6.40325 13.6704 6.40325H17.9365C18.9039 6.40325 19.3076 7.63995 18.5265 8.21066L15.0604 10.7434C14.3635 11.2527 14.0719 12.1517 14.3372 12.9731L15.6596 17.0661C15.9575 17.9884 14.9006 18.7528 14.118 18.181L10.68 15.6687C9.97715 15.1552 9.02285 15.1552 8.32002 15.6687L4.882 18.181C4.09941 18.7528 3.04247 17.9884 3.34043 17.0661L4.66275 12.9731C4.92812 12.1517 4.63654 11.2527 3.93958 10.7434L0.473474 8.21066C-0.307563 7.63995 0.0961285 6.40325 1.06346 6.40325H5.32957C6.19726 6.40325 6.96597 5.84376 7.23271 5.01809L8.54843 0.945475Z"
+				fill="#DF635C" />
+		</symbol>
+	</svg>
+
+	<header class="header">
+		<div class="header-top">
+			<div class="container">
+				<div class="header-top__inner">
+					<div class="header-top__text">
+						<p class="join__text"><a class="join__text__link" href="#">Начни учится прямо сейчас.
+								<span>Присоедениться</span> </a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-bottom">
+			<div class="container">
+				<div class="header-bottom__inner">
+					<div class="logo">
+						<svg class="logo__icon">
+							<use xlink:href="#logo"></use>
+						</svg>
+					</div>
+					<div class="header__content"><span class="header__content__open">Menu</span>
+						<nav class="header__content__nav hidden" id="menu-adaptive"><img class="header__content__close"
+								src="img/cross.svg" alt="close">
+							<ul class="header__content__nav__list">
+								<li class="header__content__nav__item"><a class="header__content__nav__link" href="#">Услуги</a>
+								</li>
+								<li class="header__content__nav__item"><a class="header__content__nav__link"
+										href="#">Стоимость</a></li>
+								<li class="header__content__nav__item"><a class="header__content__nav__link" href="#">Наша
+										история</a></li>
+								<li class="header__content__nav__item" id="logo"><img id="logo-logo" src="img/logo.svg"
+										alt="logo"></li>
+								<li class="header__content__nav__item" id="small-menu">
+									<div id="tel"><a href="tel:+375292854338"><span class="small">+375(29)</span>285-43-38</a>
+									</div>
+									<div>
+										<div class="work"><span class="work__title">Мы в настоящее время</span><span
+												class="work__yes-no" id="work-text">Работаем</span>
+											<table class="work__char">
+												<tr class="work__char__tr">
+													<td class="work__char__tr__td-1">Пн-Пт:</td>
+													<td class="work__char__tr__td-2">8:00 - 21:00</td>
+												</tr>
+												<tr class="work__char__tr">
+													<td class="work__char__tr__td-1">Сб-Вс:</td>
+													<td class="work__char__tr__td-2">Выходной</td>
+												</tr>
+											</table>
+										</div>
+										<div class="social">
+											<a class="social__telegramm" href="https://teleg.run/+375292854338">Telegram</a><a
+												class="social__viber" href="viber://public?id=+375292854338">Viber</a><a
+												class="social__whatsapp" href="https://wa.me/+375292854338">WhatsApp</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<div class="header__content__social"><a class="header__content__social__tel"
+								href="tel:+375292854338"><span class="small">+375(29)</span>285-43-38</a><a
+								class="header__content__social__tel-2" href="viber://public?id=+375292854338"></a><a
+								class="header__content__social__telegram" href="https://teleg.run/+375292854338"></a><a
+								class="header__content__social__whatsapp" href="https://wa.me/+375292854338"></a></div>
+					</div>
+
+					<nav class="menu">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a class="menu__link" href="#">Услуги</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#">Стоимость</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link" href="#">Наша история</a>
+							</li>
+							<li class="menu__item-phone">
+								<svg class="phone">
+									<use xlink:href="#phone"></use>
+								</svg>
+								<p><a href="tel:+375292854338"><span class="phone-small">+375(29)</span>285-43-38</a></p>
+							</li>
+							<li class="menu__item-social">
+								<ul class="social">
+									<li class="social-item">
+										<svg class="social__icon">
+											<use xlink:href="#viber"></use>
+										</svg>
+									</li>
+									<li class="social-item">
+										<svg class="social__icon">
+											<use xlink:href="#telegram"></use>
+										</svg>
+									</li>
+									<li class="social-item">
+										<svg class="social__icon">
+											<use xlink:href="#whatsapp"></use>
+										</svg>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="intro">
+		<div class="container">
+			<div class="intro__inner">
+				<div class="intro__content">
+					<div class="intro__title">
+						Измените свою жизнь, начни изучать английский с LovEng !</div>
+					<div class="intro__subtitle">
+						Мы – LovEng ! Добро пожаловать в онлайн мир качественного и интересного изучения английского языка .
+					</div>
+					<a class="intro-btn" href="#">Присоедениться</a>
+				</div>
+				<div class="heroes">
+					<div class="heroes__inner">
+						<div class="heroes__item">
+							<img class="heroes__face" src="img/heroes/1.png" alt="">
+							<img class="heroes__cursor-1" src="img/cursor/1.svg" alt="">
+						</div>
+						<div class="heroes__item">
+							<img class="heroes__face" src="img/heroes/3.png" alt="">
+						</div>
+						<div class="heroes__item">
+							<img class="heroes__face" src="img/heroes/5.png" alt="">
+							<img class="heroes__cursor-2" src="img/cursor/3.svg" alt="">
+						</div>
+					</div>
+					<div class="heroes__inner">
+						<div class="heroes__item">
+							<img class="heroes__face" src="img/heroes/2.png" alt="">
+							<img class="heroes__cursor-3" src="img/cursor/2.svg" alt="">
+						</div>
+						<div class="heroes__item">
+							<img class="heroes__face" src="img/heroes/4.png" alt="">
+							<img class="heroes__cursor-4" src="img/cursor/5.svg" alt="">
+						</div>
+						<div class="heroes__item">
+							<img class="heroes__face" src="img/heroes/6.png" alt="">
+							<img class="heroes__cursor-5" src="img/cursor/4.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="sponsors">
+		<div class="container">
+			<div class="sponsors__inner">
+				<div class="sponsors-item">
+					<img class="sponsor" src="img/sponsors/1.png" alt="">
+				</div>
+				<div class="sponsors-item">
+					<img class="sponsor" src="img/sponsors/2.png" alt="">
+				</div>
+				<div class="sponsors-item">
+					<img class="sponsor" src="img/sponsors/3.png" alt="">
+				</div>
+				<div class="sponsors-item">
+					<img class="sponsor" src="img/sponsors/4.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="main__slider swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><img src="img/slider/img9.png" alt="photo"></div>
+			<div class="swiper-slide"><img src="img/slider/img10.png" alt="photo"></div>
+			<div class="swiper-slide"><img src="img/slider/img8.png" alt="photo"></div>
+			<div class="swiper-slide"><img src="img/slider/img11.png" alt="photo"></div>
+			<div class="swiper-slide"><img src="img/slider/img12.png" alt="photo"></div>
+			<div class="swiper-slide"><img src="img/slider/img13.png" alt="photo"></div>
+		</div>
+	</section>
+	<section class="loveng">
+		<div class="container">
+			<div class="loveng__inner">
+				<h3 class="loveng__title">Что такое LovEng ?
+				</h3>
+				<p class="loveng__subtitle">Наша платформа - это новый образовательный онлайн-проект, который поможет тебе
+					выучить
+					английский язык.Вы будете учиться
+					как индивидуально, так и практиковать полученные знания в небольших группах.
+				</p>
+			</div>
+			<div class="card-wrapper">
+				<div class="card__inner">
+					<div class="card">
+						<picture class="card__images">
+							<source media="(min-width:450px and max-width: 1150px)" srcset="/img/card/1-2.png">
+							<source media="(max-width: 450px)" srcset="/img/card/1-3.png">
+
+							<img src="img/card/1.png" alt="">
+						</picture>
+						<div class="card__rate"><svg class="star__icon">
+								<use xlink:href="#star"></use>
+							</svg>Карьера / Путешевствие</div>
+						<h3 class="card__title">Я уеду жить в Лондон</h3>
+						<div class="card__line"></div>
+						<p class="card__subtitle">Программа предназначена для тех,кто хочет выучить английский язык или
+							усовершенствовать уже имеющиеся знания. Во время
+							занятий мы будем много разговаривать, пополнять словарный запас,смотреть и разбирать видео
+							и,конечно
+							же, делать упор на
+							грамматику.
+						</p>
+						<a href="#" class="card__link">Подробнее</a>
+					</div>
+					<div class="card">
+						<picture class="card__images">
+							<source media="(min-width:450px and max-width: 1150px)" srcset="/img/card/2-2.png">
+							<source media="(max-width: 450px)" srcset="/img/card/2-3.png">
+							<img src="img/card/2.png" alt="">
+						</picture>
+						<div class="card__rate"><svg class="social__icon">
+								<use xlink:href="#star"></use>
+							</svg>Школьник / Студент</div>
+						<h3 class="card__title">Не хочу учиться, а хочу жениться</h3>
+						<div class="card__line"></div>
+						<p class="card__subtitle">Вы или ваш ребенок потеряли интерес к языку, а школьная программа или сессия
+							уже наступает на пятки? Мы подробно
+							разберём все волнующие и не понятные для вас темы и докажем ,что английский – это легко и
+							интересно.
+							Мы уверены, вы не
+							захотите останавливаться.</p>
+						<a href="#" class="card__link">Подробнее</a>
+					</div>
+					<div class="card">
+						<picture class="card__images">
+							<source media="(min-width:450px and max-width: 1150px)" srcset="/img/card/3-3.png">
+							<source media="(max-width: 450px)" srcset="/img/card/3-4.png">
+							<img src="img/card/3.png" alt="">
+						</picture>
+						<div class="card__rate"><svg class="social__icon">
+								<use xlink:href="#star"></use>
+							</svg>Компания / Сотрудник</div>
+						<h3 class="card__title">Моя Перспектива</h3>
+						<div class="card__line"></div>
+						<p class="card__subtitle">Компаниям ,корпоративный английский для сотрудников. Бизнес-Английский язык
+							для
+							компаний или людей, желающих получить
+							новые знания и в будущем найти хорошую работу или крутых клиентов. Хорошая идея для тим-билдинга и
+							повышения личностного
+							роста .</p>
+						<a href="" class="card__link">Подробнее</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="start">
+		<div class="container">
+			<div class="start__inner">
+				<span class="start__slogan">ПРЯМО СЕЙЧАС</span>
+				<h3 class="start__title">Начните учить язык прямо сейчас !</h3>
+				<p class="start__subtitle">Мы делаем все возможное, чтобы сделать обучение легким и доступным для вас. Вы
+					можете
+					учиться в любом месте , в
+					независимости от вашего местоположения или времени суток.</p>
+				<div class="start__video">
+					<div class="main__video__block">
+						<div class="main__video__block__black"><img src="img/video.png" alt="img"></div>
+					</div>
+				</div>
+				<div class="start__about">
+					<div class="about__item">
+						<h5 class="about__title">100%</h5>
+						<span class="about__caption">ЗАВЕРШЕНИЕ ПРОГРАММЫ
+						</span>
+						<p class="about__subtitle">Типичные онлайн-курсы имеют коэффициент завершения 62,3%. Мы гордимся тем,
+							что
+							имеем 100%-ный показатель.</p>
+					</div>
+					<div class="about__item">
+						<h5 class="about__title">5/5</h5>
+						<span class="about__caption">СРЕДНИЙ ОТЗЫВ</span>
+						<p class="about__subtitle">Главная цель наших занятий-дать ученикам возможность учиться на практике и
+							получать массу удовольствия от этого
+							процесса.</p>
+					</div>
+					<div class="about__item">
+						<h5 class="about__title">6</h5>
+						<span class="about__caption">ОДНОКЛАССНИКИ</span>
+						<p class="about__subtitle">Исходя из нашего опыта и отзывов, 6-это идеальный размер класса для
+							объединения
+							учащихся вместе, чтобы учиться друг у
+							друга.</p>
+					</div>
+					<div class="about__item">
+						<h5 class="about__title">50+</h5>
+						<span class="about__caption">ВЫПУСКНИКИ
+						</span>
+						<p class="about__subtitle">Более 50 успешно окончивших курс учеников .</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="video">
+		<div class="container">
+			<div class="video__inner"></div>
+		</div>
+	</section>
+
+	<section class="student">
+		<div class="container">
+			<div class="student__inner">
+				<span class="student__slogan">ВЫПУСКНИКИ</span>
+				<h3 class="student__title">Познакомьтесь с нашими выпускниками</h3>
+				<p class="student__subtitle">Наши курсы построены так, чтобы вы изучали английский язык шаг за шагом с
+					помощью практической учебной программы.</p>
+				<div class="comment">
+					<div class="comment__item">
+						<div class="comment-box">
+							<img class="comment__img" src="img/student/1.png" alt="">
+							<div class="comment-content">
+								<p class="comment__lastname">Виктория</p>
+								<span class="comment__job">Артдиректор</span>
+							</div>
+						</div>
+						<p class="comment__text">Укрепила то, что я знала когда-то давно, со школьных времён, и позволила мне
+							бросить вызов своим собственным страхам.</p>
+					</div>
+					<div class="comment__item">
+						<div class="comment-box">
+							<img class="comment__img" src="img/student/2.png" alt="">
+							<div class="comment-content">
+								<p class="comment__lastname">Слава</p>
+								<span class="comment__job">Директор по продажам</span>
+							</div>
+						</div>
+						<p class="comment__text">Быстрый темп учебы и дружественная обстановка”. Без воды ,всё как я люблю.
+						</p>
+					</div>
+					<div class="comment__item">
+						<div class="comment-box">
+							<img class="comment__img" src="img/student/3.png" alt="">
+							<div class="comment-content">
+								<p class="comment__lastname">Орнэлла</p>
+								<span class="comment__job">Школьница</span>
+							</div>
+						</div>
+						<p class="comment__text">Ребёнок сильно отставал по программе и тяжело было заставить заниматься,
+							после 1 урока ситуация изменилась кардинально.</p>
+						<p class="comment__text"> С удовольствием выходит на урок и делает все домашнее задание .</p>
+					</div>
+					<div class="comment__item">
+						<div class="comment-box">
+							<img class="comment__img" src="img/student/4.png" alt="">
+							<div class="comment-content">
+								<p class="comment__lastname">Вероника</p>
+								<span class="comment__job">Менеджер по продажам</span>
+							</div>
+						</div>
+						<p class="comment__text">Было приятно находиться в учебном пространстве с людьми со всего мира. Я
+							думаю, что в целом атмосфера очень
+							позитивная. Занятия разработаны очень хорошо, легко отслеживать свои результаты и оставаться
+							сосредоточенным.</p>
+					</div>
+					<div class="comment__item">
+						<div class="comment-box">
+							<img class="comment__img" src="img/student/5.png" alt="">
+							<div class="comment-content">
+								<p class="comment__lastname">Наталья</p>
+								<span class="comment__job">Программист</span>
+							</div>
+						</div>
+						<p class="comment__text">Мой опыт работы был только положительным - продолжительность этого курса
+							очень комфортная и приспосабливается к моему графику. Я нуждалась в обновлении знаний и повышения
+							уровня английского для работы. А также была довольна содержанием
+							курса.</p>
+					</div>
+					<div class="comment__item">
+						<div class="comment-box">
+							<img class="comment__img" src="img/student/6.png" alt="">
+							<div class="comment-content">
+								<p class="comment__lastname">Наташа</p>
+								<span class="comment__job">консультант по продажам</span>
+							</div>
+						</div>
+						<p class="comment__text">”LovEng” помог мне обрести понимание и уверенность в разговорной речи. Я
+							всегда много путешествовала, но не уверенность в моём английском, лишала меня возможности иметь
+							полноценный отдых. Теперь, у меня большой словарный запас,и я с
+							лёгкостью могу решить любой вопрос.</p>
+					</div>
+					<div class="comment__item">
+						<div class="comment-box">
+							<img class="comment__img" src="img/student/7.png" alt="">
+							<div class="comment-content">
+								<p class="comment__lastname">Олег</p>
+								<span class="comment__job">Ведущий</span>
+							</div>
+						</div>
+						<p class="comment__text">Всё способствовало комфортному и успешному обучению: группа небольшого
+							размера и адекватная цена. Атмосфера была очень
+							дружелюбная и материал буквально “ разжёвывался” преподавателем, для меня это было важно.</p>
+					</div>
+					<div class="comment__item">
+						<div class="comment-box">
+							<img class="comment__img" src="img/student/8.png" alt="">
+							<div class="comment-content">
+								<p class="comment__lastname">Яна</p>
+								<span class="comment__job">Школьница</span>
+							</div>
+						</div>
+						<p class="comment__text">Заряжающие занятия, высококлассная методология, основанная на обучении на
+							практике. Я могу смело сказать, что это лучшая
+							платформа для всех, кто хочет выучить английский язык и активно использовать его в своей жизни !
+						</p>
+					</div>
+					<div class="comment__item">
+						<div class="comment-box">
+							<img class="comment__img" src="img/student/9.png" alt="">
+							<div class="comment-content">
+								<p class="comment__lastname">Наташа</p>
+								<span class="comment__job">Программист</span>
+							</div>
+						</div>
+						<p class="comment__text">Узнала много нового .Прошла этап с А1 до B2 и ни капли не жалею, что
+							остановилась на выборе именно этой платформы .
+							Веселая динамичная среда и возможность учиться в любое время – огромный плюс!</p>
+					</div>
+					<div class="comment__item">
+						<div class="comment-box">
+							<img class="comment__img" src="img/student/10.png" alt="">
+							<div class="comment-content">
+								<p class="comment__lastname">Оля</p>
+								<span class="comment__job">Логист</span>
+							</div>
+						</div>
+						<p class="comment__text">10/10 -это моя объективная оценка ! Учила английский для работы , и это было
+							моё самое грамотное финансовое вложение в себя за последнее время.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="history">
+		<div class="container">
+			<span class="history__slogan">НАША ИСТОРИЯ</span>
+			<h3 class="history__title">LovEng – это доступный способ учиться онлайн</h3>
+			<div class="history__inner">
+				<div class="history__photo">
+					<picture class="history__img">
+						<source media="(max-width: 1150px)" srcset="/img/history/2.png">
+						<img src="img/history/1.png" alt="">
+					</picture>
+				</div>
+				<div class="history__content">
+					<div class="history-box">
+						<img class="history__img" src="img/student/10.png" alt="">
+						<div class="history-content">
+							<p class="history__lastname">Юлия Савкина</p>
+							<span class="history__job">Основатель LovEng</span>
+						</div>
+					</div>
+					<div class="history__text-box">
+						<p class="history__text">Давайте посмотрим правде в глаза, изучение английского языка никогда не было
+							легким и дешёвым. За последнее десятилетие курсы стоили в среднем 200 долларов и преподавались не
+							всегда с большим энтузиазмом. Мы делаем все немного по-другому. Наша цель сделать обучение
+							доступным
+							для всех.</p>
+						<p class="history__text">С LovEng вы не платите дополнительные деньги за то, что мы арендовали крутой
+							офис в центре города. Вам
+							так же не придётся тратить время на дорогу к нам. Мы созданы для того, что где бы вы ни находились,
+							у
+							вас была возможность учиться в реальном времени.</p>
+					</div>
+					<a class="history__link" href="#">Читать историю</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="info">
+		<div class="container">
+			<div class="info__inner">
+				<span class="info-slogan">НЕ ТАКОЙ КАК ВСЕ</span>
+				<h3 class="info-title">Что делает LovEng другим</h3>
+				<p class="info-subtitle">Мы не движимы деньгами ,но заинтересованы в том, что бы получить крутой
+					результат ! Мы с радостью преодолеваем проблемы
+					и обучаем вас лично, применяя 100%-ный подход к каждому ученику.</p>
+				<div class="info__items">
+					<div class="info__item">
+						<span class="info-humber">1.</span>
+						<h4 class="info__title">Мы любим своих учеников</h4>
+						<p class="info__subtitle">Мы всегда на связи и готовы ответить даже на любой ваш вопрос</p>
+					</div>
+					<div class="info__item">
+						<span class="info-humber">2.</span>
+						<h4 class="info__title">Лучшие методики</h4>
+						<p class="info__subtitle">Наши программы доступные и интересные для всех возрастов</p>
+					</div>
+					<div class="info__item">
+						<span class="info-humber">3.</span>
+						<h4 class="info__title">Положительная энергия</h4>
+						<p class="info__subtitle">Мы очень верим в излучение позитивной энергии, и быть добрым человеком-это
+							огромный путь. Мы гордимся тем, что у нас самая дружелюбная платформа на планете.</p>
+					</div>
+				</div>
+				<div class="info__banner">
+					<!-- <img src="img/banner.png" alt="" class="banner__photo"> -->
+					<div class="banner__content">
+						<div class="banner-box">
+							<h4 class="banner__title">Готов начать прямо сейчас?</h4>
+							<div class="banner__subtitle">Как вы уже поняли, мы открыты и будем рады, если вы присоединитесь к
+								нам!
+							</div>
+							<a class="banner__link" href="#">Присоедениться</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+				<div class="footer__logo">
+					<svg class="footer__icon">
+						<use xlink:href="#logo"></use>
+					</svg>
+					<p class="copyright">© LovEng 2021</p>
+					<p class="footer__privacy-policy"><span>Условия</span> & <span>Конфиденциальность</span></p>
+				</div>
+				<div class="footer__program">
+					<ul class="program__list">
+						<li class="program__item">
+							<a class="program__link" href="#">ПРОГРАММЫ</a>
+						</li>
+						<li class="program__item">
+							<a class="program__link" href="#">Английский для школьника</a>
+						</li>
+						<li class="program__item">
+							<a class="program__link" href="#">Английский для путешевсктвеника</a>
+						</li>
+						<li class="program__item">
+							<a class="program__link" href="#">Английский для компании</a>
+						</li>
+						<li class="program__item">
+							<a class="program__link" href="#">Прайс лист</a>
+						</li>
+						<li class="program__item">
+							<a class="program__link" href="#">Поделись с другом</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__about">
+					<ul class="about__list">
+						<li class="about__items">
+							<a class="about__link" href="#">О НАС</a>
+						</li>
+						<li class="about__items">
+							<a class="about__link" href="#">Наша история</a>
+					</ul>
+				</div>
+				<div class="footer__feedback">
+					<ul class="feedback__list">
+						<li class="feedback__item">
+							<a class="feedback__link" href="#">СВЯЗЬ С НАМИ</a>
+						</li>
+						<li class="feedback__item">
+							<a class="feedback__link" href="#">Контакты</a>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="js/slider.js"></script>
+	<script src="js/date.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
