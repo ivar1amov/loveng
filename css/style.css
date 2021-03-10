@@ -2140,10 +2140,50 @@ body {
 		font-size: 21px;
 		line-height: 27px;
 	}
+	.social__whatsapp {
+	}
+	.intro-btn {
+		padding: 22px 95px;
+	}
 }
 
 @media (max-width: 330px) {
 	.history__photo img {
 		width: 290px;
+	}
+	.intro-btn {
+		padding: 22px 48px;
+	}
+}
+
+@media (max-width: 410px) {
+	.intro-btn {
+		padding: 22px 85px;
+	}
+}
+@media (max-width: 390px) {
+	.intro-btn {
+		padding: 22px 75px;
+	}
+}
+
+@media (max-width: 375px) {
+	.intro-btn {
+		padding: 22px 65px;
+	}
+}
+@media (max-width: 350px) {
+	.intro-btn {
+		padding: 22px 55px;
+	}
+}
+@media (max-width: 335px) {
+	.intro-btn {
+		padding: 22px 50px;
+	}
+}
+@media (max-width: 321px) {
+	.intro-btn {
+		padding: 22px 48px;
 	}
 }
