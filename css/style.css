@@ -2082,12 +2082,68 @@ body {
 		padding: 33px 17px;
 	}
 	.history__photo img {
-		width: 410px;
+		width: 395px;
+	}
+	.student__title {
+		font-size: 36px;
+		line-height: 45px;
+	}
+	.history__title {
+		font-size: 36px;
+		line-height: 45px;
+	}
+	.info__title {
+		font-size: 22px;
+		line-height: 24px;
+	}
+	.banner__title {
+		font-size: 36px;
+		line-height: 45px;
+	}
+	.banner__subtitle {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.start__title {
+		font-size: 36px;
+		line-height: 45px;
+	}
+	.card:last-child {
+		margin-bottom: 0px;
+	}
+	.card__title {
+		max-width: 227px;
+		font-size: 26px;
+		line-height: 30px;
+	}
+	.card__rate {
+		font-size: 17px;
+		line-height: 27px;
+	}
+	.card__subtitle {
+		font-size: 14px;
+		line-height: 17px;
+	}
+	.loveng__title {
+		font-size: 36px;
+		line-height: 45px;
+	}
+	.sponsors__inner {
+		padding: 0;
+	}
+	.intro__title {
+		font-size: 36px;
+		line-height: 45px;
+	}
+	.intro__subtitle {
+		font-size: 21px;
+		line-height: 27px;
 	}
 }
 
 @media (max-width: 330px) {
 	.history__photo img {
-		width: 300px;
+		width: 290px;
 	}
 }
