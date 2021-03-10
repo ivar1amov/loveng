@@ -2145,6 +2145,10 @@ body {
 	.intro-btn {
 		padding: 22px 95px;
 	}
+	.main__video__block__black img {
+		padding-left: 26px;
+		width: 93%;
+	}
 }
 
 @media (max-width: 330px) {
@@ -2165,6 +2169,10 @@ body {
 	.intro-btn {
 		padding: 22px 75px;
 	}
+	.main__video__block__black img {
+		padding-left: 45px;
+		width: 86%;
+	}
 }
 
 @media (max-width: 375px) {
@@ -2175,6 +2183,11 @@ body {
 @media (max-width: 350px) {
 	.intro-btn {
 		padding: 22px 55px;
+	}
+	.main__video__block__black img {
+		padding-left: 25px;
+		width: 92%;
+		/* height: auto; */
 	}
 }
 @media (max-width: 335px) {
